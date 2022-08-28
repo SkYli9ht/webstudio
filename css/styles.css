@@ -12,6 +12,11 @@
     --second-border-color: #EEEEEE;
     --work-text-background-color: rgba(47, 48, 58, 0.8);
     --element-text-background-color: rgba(33, 150, 243, 0.9);
+    --background-backdrop-color: rgba(0, 0, 0, 0.2);
+    --header-border-color: #ECECEC;
+    --transition-time: 250ms;
+    --transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+    --button-close-modal-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -122,9 +127,30 @@ ul{
     padding: 0;
 }
 
+.header-container {
+    border-bottom: 1px solid var(--header-border-color);
+}
+
 .menu li:not(:last-child),
 .header-contact li:not(:last-child) {
     margin-right: 50px;
+}
+
+.link.menu--current {
+    position: relative;
+    color: var(--site-text-color);
+}
+
+.menu--current::after {
+    content: " ";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--site-text-color);
+    transition: color var(--transition-time) var(--transition-cubic);
 }
 
 /*Main container*/
@@ -192,6 +218,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
 }
 
 .feature-title {
@@ -513,8 +540,7 @@ address .address.link {
 .filter-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
+    justify-content: center; 
 }
 
 .filter-title {
@@ -558,24 +584,25 @@ address .address.link {
     margin-bottom: 30px;
     border: 1px solid var(--second-border-color);
     cursor: pointer;
-}
-
-.elements-container {
     position: relative;
 }
 
-.elements-container:hover .element-text,
-.elements-container:hover::before {
-    opacity: 1;
+.elements:hover {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
-.elements-container .element-text {
-    position: absolute;
-    margin: 0;
-    top: 20%;
-    color: var(--main-header-color);
-    opacity: 0;
+.examples-link {
+    height: 100%;
+    text-decoration: none;
+}
 
+.elements-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.text-container > p {
+    padding-top: 10%;
     padding-right: 24px;
     padding-left: 24px;
 
@@ -585,24 +612,27 @@ address .address.link {
     line-height: 1.55;
 }
 
-.elements-container::before {
-    display: inline-block;
+.text-container {
+    display: flex;
     position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: var(--element-text-background-color);
-    
     top: 0;
     left: 0;
-    opacity: 0;
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    color: var(--main-header-color);
+    transform: translateY(100%);
+    transition: transform var(--transition-time) var(--transition-cubic);
+    background-color: var(--element-text-background-color);
 }
 
+.examples-card > h2 {
+    color: var(--primary-text-color);
+}
 
-.elements:hover {
-    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+.examples-link:hover .text-container {
+    transform: translateY(0);
 }
 
 .project-list {
@@ -618,3 +648,60 @@ address .address.link {
     margin-left: 30px;
 }
 попробовать позже разобраться вместо justify-content*/
+
+/*Backdrop*/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-backdrop-color);
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+    background-color: var(--main-header-color);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.btn-close {
+    width: 30px;
+    height: 30px;
+
+    padding: 5px 4px 6px 4px;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    background-color: var(--background-icon-color);
+
+    border-radius: 50%;
+    border: 1px solid var(--button-close-modal-color);
+
+    cursor: pointer;  
+}
+
+.modal-icon {
+    display: flex;
+    margin: auto;
+}
+
+.btn-close:hover .modal-icon,
+.btn-close:focus .modal-icon {
+    fill: var(--site-text-color);
+}
