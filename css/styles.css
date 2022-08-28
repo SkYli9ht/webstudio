@@ -17,7 +17,7 @@
     --transition-time: 250ms;
     --transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
     --button-close-modal-color: rgba(0, 0, 0, 0.1);
-}
+    --placeholder-text-color: rgba(255, 255, 255, 0.6);}
 
 body {
     font-family: Roboto, sans-serif;
@@ -427,7 +427,7 @@ button {
 /*Footer*/
 
 footer {
-    background-color: #2F303A;
+    background-color: var(--primary-background-color);
     display: flex;
 }
 
@@ -487,6 +487,14 @@ address .address.link {
     flex-wrap: nowrap
 }
 
+.join-list-item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--background-icon-color);
+    cursor: pointer;
+}
+
 .join-link {
     width: 44px;
     height: 44px;
@@ -499,17 +507,51 @@ address .address.link {
     fill: var(--main-header-color)
 }
 
-.join-list-item {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--background-icon-color);
-    cursor: pointer;
-}
-
 .join-list-item:hover,
 .join-list-item:focus {
     background-color: var(--site-text-color)
+}
+
+.container-subscribe {
+    margin-left: auto;
+}
+
+.title-subscribe {
+    font-weight: 700px;
+    font-size: 14px;
+    line-height: 1.17;
+    text-transform: uppercase;
+    color: var(--main-header-color);
+    margin-bottom: 20px;
+}
+
+.container-form input {
+    width: 358px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+
+    background-color: var(--primary-background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.container-form input::placeholder {
+    color: var(--placeholder-text-color);
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.btn-subscribe {
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.icon-subscribe {
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 /*Portfolio*/
@@ -567,8 +609,8 @@ address .address.link {
 }
 
 .specification {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: auto;
+    padding-bottom: 20px;
     text-align: left;
 
     color: var(--specific-text-color);
