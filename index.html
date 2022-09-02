@@ -362,11 +362,56 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="btn-close" data-modal-close>
+            <button type="button" class="btn-close" data-modal-close> 
                 <svg class="modal-icon" width="11" height="11">
-                    <use href="./images/sprite.svg#icon-Vector">
+                    <use href="./images/sprite.svg#icon-Vector"></use>
                 </svg>
             </button>
+            <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <form class="modal-form">
+                    <div class="container-filed">
+                        <label class="filed">
+                            <input type="text" name="name" class="form-input">
+                            <span class="filed-text">Имя</span> 
+                            <svg class="filed-icon">
+                                <use href="./images/sprite.svg#icon-person-black"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="container-filed">   
+                        <label class="filed">
+                            <input type="tel" name="tel" class="form-input">
+                            <span class="filed-text">Телефон</span> 
+                            <svg class="filed-icon">
+                                <use href="./images/sprite.svg#icon-phone-black"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="container-filed">
+                        <label class="filed">
+                            <input type="email" name="email" class="form-input">
+                            <span class="filed-text">Почта</span>
+                            <svg class="filed-icon">
+                                <use href="./images/sprite.svg#icon-email-black"></use>
+                            </svg>   
+                        </label>
+                    </div>
+                    <div class="container-filed">
+                        <textarea name="" placeholder="Введите текст" class="form-input"></textarea>
+                        <span class="filed-text">Комментарий</span>
+                    </div>
+                <div class="accept-button-container">
+                    <div class="accept-container">
+                        <label class="accept-container">
+                            <input type="checkbox" class="checkbox" name="accept" value="accept">
+                            <span class="accept-icon"></span>
+                            <span class="accept-text">Соглашаюсь с рассылкой и принимаю</span> 
+                            <a href="" class="accept-link">Условия договора</a>
+                        </label>
+                    </div>
+                    <button type="button" class="btn-modal">Отправить</button>
+                </div>    
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
