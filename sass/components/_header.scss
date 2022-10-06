@@ -1,0 +1,74 @@
+.header {
+    border-bottom: 1px solid $header-border-color;
+}
+
+.nav,
+.menu,
+.contact {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.menu__nav,
+.header__contact {
+    font-weight: 500;
+    font-size: 14px;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header__contact {
+    color: $specific-text-color;
+}
+
+.menu__nav {
+    color: $primary-text-color;
+}
+
+.header__contact:not(:last-child) {
+    margin-right: 50px;
+}
+
+.menu__nav:not(:last-child) {
+    margin-right: 50px;
+}
+
+.menu__nav--current {
+    position: relative;
+    color: $site-text-color;
+}
+
+.menu__nav--current::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $site-text-color;
+    transition: color $transition-time $transition-cubic;
+}
+
+.contact {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contact__icon {
+    fill: currentColor;
+    margin-right: 10px;
+    vertical-align: middle; 
+}
+
+.header__contact:hover,
+.header__contact:focus,
+.menu__nav:hover,
+.menu__nav:focus {
+    color: $site-text-color;
+}

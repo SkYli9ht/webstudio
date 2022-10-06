@@ -1,0 +1,28 @@
+.filter_container {
+    padding-bottom: 50px;
+}
+
+.filter__title {
+    display: none;
+}
+
+.filter__button {
+    color: $primary-text-color;
+    background-color: $second-background-color;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 6px 22px;
+    display: inline-block;
+}
+
+.filter__button:hover {
+    color: $main-color;
+    background-color: $site-text-color;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.filter__list li:not(:last-child) {
+    margin-right: 8px;
+}

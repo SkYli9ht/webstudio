@@ -1,0 +1,38 @@
+.clients__container{
+    display: block;
+}
+
+.clients__list {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.clients__item {
+    width: 170px;
+    height: 92px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.clients__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients__item:hover .clients__svg,
+.clients__item:focus .clients__svg {
+    fill: $site-text-color;
+}
+
+.clients__item:hover,
+.clients__item:focus{
+    border-color: $site-text-color;
+}
+
+.clients__svg {
+    fill: $border-color;
+}

@@ -1,0 +1,122 @@
+.footer__container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+footer {
+    background-color: $primary-background-color;
+}
+
+.info-container{
+    margin-right: 70px;
+}
+
+.info:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.footer__contact {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+        
+    font-style: normal;
+
+    margin-top: 20px;
+}
+
+.contact__item {
+    margin-bottom: 9px;
+}
+
+.footer__address{
+    color: $main-color;
+    text-decoration: none;
+}
+
+.footer__mail,
+.footer__tel {
+    color: $footer-color;
+    text-decoration: none;
+}
+
+/*Join*/
+
+.join__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $main-color;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.join__item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $background-icon-color;
+    cursor: pointer;
+}
+
+.join__item:hover,
+.join__item:focus{
+    background-color: $site-text-color;
+}
+
+.join__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.join__link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join__icon {
+    fill: $main-color;
+}
+
+/*subscribe*/
+
+.subscribe{
+    margin-left: auto;
+}
+
+.subscribe__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $main-color;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.subscribe-form input {
+    width: 358px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+
+    background-color: $primary-background-color;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+}
+
+.subscribe-form input::placeholder {
+    color: $placeholder-text-color;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.btn-subscribe {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.subscribe__icon {
+    vertical-align: middle;
+    margin-left: 10px;
+}

@@ -1,0 +1,74 @@
+$primary-text-color: #212121;
+$site-text-color: #2196F3;
+$specific-text-color: #757575;
+$main-color: #fff;
+$primary-background-color: #2F303A;
+$second-background-color: #F5F4FA;
+$feature-color: #F5F4FA;
+$border-color: #AFB1B8;
+$second-border-color: #EEEEEE;
+$header-border-color: #ECECEC;
+
+$footer-color: rgba(100%, 100%, 100%, 60%);
+$background-icon-color: rgba(255, 255, 255, 0.1);
+$work-text-background-color: rgba(47, 48, 58, 0.8);
+$element-text-background-color: rgba(33, 150, 243, 0.9);
+$background-backdrop-color: rgba(0, 0, 0, 0.2);
+$button-close-modal-color: rgba(0, 0, 0, 0.1);
+$placeholder-text-color: rgba(255, 255, 255, 0.6);
+$modal-placeholder-color: rgba(117, 117, 117, 0.5);
+
+$transition-time: 250ms;
+$transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+
+body {
+    font-family: Roboto, sans-serif;
+    color: $primary-text-color;
+    background-color: $main-color;
+
+    line-height: 1.17;
+}
+
+.container {
+    margin: auto;
+    width: 1200px;
+    padding: 94px 15px;
+    display: flex;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.link {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.button {
+    color: $main-color;
+    background-color: $site-text-color;
+    border: 0ch;
+    border-radius: 4px;
+
+    padding: 10px 32px;
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    cursor: pointer;     
+}
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.list {
+    display: flex; 
+}

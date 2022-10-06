@@ -1,0 +1,32 @@
+.feature__title {
+    display: none;
+}
+
+.feature__item:not(:last-child) {
+    margin-right: 30px;
+    flex-wrap: wrap;
+} 
+
+.item__container {
+    background-color: $feature-color;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+}
+
+.item__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.item__text {
+    color: $specific-text-color;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.03;
+    margin-top: o;
+}

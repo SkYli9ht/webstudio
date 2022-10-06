@@ -1,0 +1,25 @@
+.logo {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.17;
+    width: 145px;
+    height: 31px;
+    top: 24px;
+    left: 215px;
+    text-decoration: none;
+
+    margin-right: 93px;
+}
+
+.logo__web {
+    color: $site-text-color;
+}
+
+.logo__studio {
+    color: $main-color;
+}
+
+.logo__studio-black {
+    color: $primary-text-color;
+}

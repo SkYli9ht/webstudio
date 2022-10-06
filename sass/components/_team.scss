@@ -1,0 +1,80 @@
+.team__section {
+    background-color: $second-background-color;
+}
+
+.team__container{
+    display: block;
+}
+
+.team__title{
+    margin-bottom: 50px; 
+}
+
+.badge {
+    width: 270px;
+    box-shadow: 0px 2px 1px 0px #00000033;
+    box-shadow: 0px 1px 1px 0px #00000024;
+    box-shadow: 0px 1px 3px 0px #0000001F;
+    border-radius: 4px;
+    background-color: $main-color;
+}
+
+.badge:not(:last-child) {
+    margin-right: 30px;
+}
+
+.badge__name {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.badge__description {
+    color: $specific-text-color;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+.team__list {
+    padding: 0;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+.icon__list {
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+}
+
+.icon__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.icon__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: $border-color;
+}
+
+.icon__link:hover .icon__svg,
+.icon__link:focus .icon__svg {
+    fill: $main-color;
+}
+
+.icon__link:hover,
+.icon__link:focus{
+    background-color: $site-text-color;
+}
+
+.icon__svg {
+    fill: $border-color;
+}
